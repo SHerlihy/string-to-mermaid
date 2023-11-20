@@ -13,11 +13,13 @@ fs.readFile(argFile, (err, data) => {
 
     defTxt="\"" + data.toString() + "\""
 
-    const defStr = defTxt.split("\n").join("\n")
+    const codedStr = defTxt.split("\n").join("\\u000A")
 
     const projPath = path.resolve(__dirname, '../')
     console.log(projPath+"/defString.js")
-    fs.writeFileSync(projPath+"/defString.js", "export const defString = " + defStr)
+
+    const defStr = "export const defString = " + codedStr
+    fs.writeFileSync(projPath+"/defString.js", Buffer.from(defStr, 'utf8'))
 
     //wtProm
     //.then(()=>{})

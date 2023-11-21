@@ -7,6 +7,10 @@ process.argv.forEach((val, index) => {
   console.log(`${index}: ${val}`);
 });
 
+if (process.argv.length < 3) {
+    throw new Error("graph txt file path must be given as arg")
+}
+
 const argFile = process.argv[2]
 fs.readFile(argFile, (err, data) => {
     if (err) throw err;

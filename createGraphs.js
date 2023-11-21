@@ -1,7 +1,7 @@
 import mermaid from './node_modules/mermaid/dist/mermaid.esm.mjs';
-import {defStrings} from './defStrings.js';
+import {defString} from './defString.js';
 
-const content = new String(defStrings)
+const content = new String(defString)
 
 mermaid.initialize({ 
     startOnLoad: false,

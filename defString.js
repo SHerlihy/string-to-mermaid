@@ -1,0 +1,1 @@
+export const defString = "graph TD\u000Anodeval[node val] --> adj1val[adj1 val]\u000Anodeval[node val] --> adj2val[adj2 val]"

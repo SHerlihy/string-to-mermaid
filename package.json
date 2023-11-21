@@ -2,6 +2,10 @@
   "name": "mermaidizer",
   "version": "1.0.0",
   "description": "",
+  "main": "./index.html",
+  "bin": {
+    "mermaidizer": "./bin/index.js"
+  },
   "scripts": {
     "start": "live-server .",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,6 +14,7 @@
   "license": "ISC",
   "dependencies": {
     "live-server": "^1.2.2",
-    "mermaid": "^10.6.0"
+    "mermaid": "^10.6.0",
+    "yargs": "^17.7.2"
   }
 }
